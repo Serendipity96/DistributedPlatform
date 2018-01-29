@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DistributedPlatform</title>
+    <link rel="stylesheet" href="./css/Dashboard.css">
+    <script src="js/echarts.js"></script>
+    <script type="text/javascript" src="./js/charts.js"></script>
+</head>
+<body>
+<!--云监控-->
+<div class="cloudMonitor">
+    <h2>云监控</h2>
+    <h4>概览</h4>
+    <h4 class="Dashboard">Dashboard</h4>
+    <h4>应用分组</h4>
+    <h4>主机监控</h4>
+    <h4>事件监控</h4>
+    <h4>自定义监控</h4>
+    <h4>日志监控</h4>
+    <h4>站点管理</h4>
+    <h4>云服务监控</h4>
+    <h4>报警服务</h4>
+</div>
+<div class="choiceAndTime">
+    <div class="choice">
+        <div class="monitor">
+            <label>当前监控:
+                <select name="ECS全局监控" id="select">
+                    <option value="value1" selected>ECS全局监控</option>
+                    <option value="value2">Value 2</option>
+                    <option value="value3">Value 3</option>
+
+                </select>
+            </label>
+        </div>
+        <div class="button">
+            <a href="#">创建监控</a>
+            <a href="#">删除当前监控</a>
+        </div>
+    </div>
+
+    <div class="time">
+        <span class="one">1小时</span>
+        <span>3小时</span>
+        <span>6小时</span>
+        <span>12小时</span>
+        <span>1天</span>
+        <span>3天</span>
+        <span>7天</span>
+        <span>14天</span>
+        <input id="date" type="date">
+    </div>
+</div>
+<div class="charts">
+    <a href="#" class="chart1" id="main0">chart</a>
+    <a href="#" class="chart2">chart</a>
+    <a href="#" class="chart3">chart</a>
+    <a href="#" class="chart4">chart</a>
+    <a href="#" class="chart5">chart</a>
+    <a href="#" class="chart6">chart</a>
+    <div id="main" style="width:300px;height:200px; float: right"></div>
+</div>
+</body>
+</html>
