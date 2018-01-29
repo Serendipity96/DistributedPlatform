@@ -71,6 +71,7 @@ body, h2, h4 {
     box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.3);
 }
 
+/*时间*/
 .time {
     height: 60px;
     border-bottom: 1px solid #ccc;
@@ -91,28 +92,32 @@ body, h2, h4 {
     background: #546379;
 }
 
-.time input{
+.time input {
     margin: 15px 10px;
     height: 27px;
 }
 
-.charts{
+/*表格*/
+.charts {
     margin: 20px;
+    max-width: 1300px;
 }
-.charts a{
+
+.charts a {
     border: 1px solid #ccc;
-    margin: 20px;
+    margin: 10px 30px;
     text-decoration: none;
     transition: box-shadow 0.3s;
     float: left;
-    width: 22%;
 }
-.charts a:nth-child(3){
-    float: right;
-}
-.charts a:nth-child(6){
-    float: right;
-}
-.charts a:hover{
+
+.charts a:hover {
     box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.3);
+}
+
+#chart1, #chart2, #chart3, #chart4, #chart5, #chart6 {
+    width: 300px;
+    height: 240px;
+    float: right;
+
 }

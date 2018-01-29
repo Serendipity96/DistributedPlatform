@@ -5,7 +5,6 @@
     <title>DistributedPlatform</title>
     <link rel="stylesheet" href="./css/Dashboard.css">
     <script src="js/echarts.js"></script>
-    <script type="text/javascript" src="./js/charts.js"></script>
 </head>
 <body>
 <!--云监控-->
@@ -22,6 +21,7 @@
     <h4>云服务监控</h4>
     <h4>报警服务</h4>
 </div>
+<!--筛选和时间选择-->
 <div class="choiceAndTime">
     <div class="choice">
         <div class="monitor">
@@ -52,14 +52,64 @@
         <input id="date" type="date">
     </div>
 </div>
+<!--表格-->
 <div class="charts">
-    <a href="#" class="chart1" id="main0">chart</a>
-    <a href="#" class="chart2">chart</a>
-    <a href="#" class="chart3">chart</a>
-    <a href="#" class="chart4">chart</a>
-    <a href="#" class="chart5">chart</a>
-    <a href="#" class="chart6">chart</a>
-    <div id="main" style="width:300px;height:200px; float: right"></div>
+    <a href="#" class="chart1">
+        <div id="chart1"></div>
+    </a>
+    <a href="#" class="chart2">
+        <div id="chart2"></div>
+    </a>
+    <a href="#" class="chart3">
+        <div id="chart3"></div>
+    </a>
+    <a href="#" class="chart4">
+        <div id="chart4"></div>
+    </a>
+    <a href="#" class="chart5">
+        <div id="chart5"></div>
+    </a>
+    <a href="#" class="chart6">
+        <div id="chart6"></div>
+    </a>
+
 </div>
+
+<!--ECharts.js-->
+<script type="text/javascript">
+
+    var myChart1 = echarts.init(document.getElementById('chart1'));
+    var myChart2 = echarts.init(document.getElementById('chart2'));
+    var myChart3 = echarts.init(document.getElementById('chart3'));
+    var myChart4 = echarts.init(document.getElementById('chart4'));
+    var myChart5 = echarts.init(document.getElementById('chart5'));
+    var myChart6 = echarts.init(document.getElementById('chart6'));
+
+    var option = {
+        title: {
+            text: 'test'
+        },
+        tooltip: {},
+        legend: {
+            data: ['销量']
+        },
+        xAxis: {
+            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option);
+    myChart2.setOption(option);
+    myChart3.setOption(option);
+    myChart4.setOption(option);
+    myChart5.setOption(option);
+    myChart6.setOption(option);
+</script>
 </body>
 </html>
